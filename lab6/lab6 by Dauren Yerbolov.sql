@@ -16,6 +16,8 @@ alter table Rating add constraint rating_checker1 check (stars between 1 and 5);
 
 alter table Rating add constraint rating_checker2 check (ratingDate >= TO_DATE('2000-01-01', 'yyyy-mm-dd')); --9
 
+alter table Movie add constraint movie_checker2 check ((director = 'Steven Spielberg' and year < 1990) or (director = 'James Cameron' and year >= 1990) or (director not in ('Steven Spielberg', 'James Cameron'))); --10
+
 /*checking errors, constraint enforcement // task 2-3 errors*/
 
 alter table Rating add constraint rating_fkey1 foreign key (rID) references Reviewer on update cascade on delete set null; --task4 / 26
