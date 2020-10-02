@@ -19,6 +19,7 @@ ALTER TABLE users ALTER COLUMN isadmin SET DEFAULT FALSE;
 ALTER TABLE users ADD CONSTRAINT constraint_primaryKey PRIMARY KEY (id);
 
 INSERT INTO users (firstname, lastname, isadmin) VALUES ('Dauren', 'Yerbolov', TRUE);
+INSERT INTO users (firstname, lastname, isadmin) VALUES ('Askar', 'Mussayev', TRUE);
 
 
 CREATE TABLE tasks (
